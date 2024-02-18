@@ -186,26 +186,33 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
    status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
+   font pango:Hack Nerd Font 8
 }
 
 # Color settings
-set_from_resource $fg i3wm.color7 #cb6f86
-set_from_resource $ubg i3wm.color6 #d07889
-set_from_resource $bg i3wm.color5 #cf858d
+#set_from_resource $fg i3wm.color7 #cb6f86
+#set_from_resource $ubg i3wm.color6 #d07889
+#set_from_resource $bg i3wm.color5 #cf858d
 
-#class                 	border  backgr. text    indicator       child_border
-client.focused          $fg     #040404 $fg     $fg            #cb6f86
-client.focused_inactive #c1b492 #040404 $fg     $bg             $bg
-client.unfocused        #c1b492 #c1b492 $fg     #c1b492        #c1b492
-client.urgent           #c1b492 #040404 $fg     $bg            #c1b492
-client.placeholder      #c1b492 #040404 $fg     $bg             $bg
+#class                 	border  backgr. text      indicator       child_border
+client.focused          #cb6f86 #040404 #cb6f86   #cb6f86 	  #cb6f86
+client.focused_inactive #c1b492 #040404 #cb6f86   #cb6f86         #cb6f86
+client.unfocused        #040404 #040404 #cb6f86   #c1b492         #c1b492
+client.urgent          	#c1b492 #040404 #cb6f86   #cb6f86         #c1b492
+client.placeholder     	#c1b492 #040404 #cb6f86   #cf858d         #cf858d
 
-client.background       $bg
+client.background      #cf858d
 
-bindsym $mod+n exec nautilus
+bindsym $mod+n exec thunar
 
 
 
-# Flameshot screenshot configuration 
+# Flameshot screenshot configuration
 bindsym Print exec flameshot gui
 exec --no-startup-id flameshot
+
+#wallpaper
+exec_always feh --bg-fill --randomize ~/Projects/LainRice/wallpapers/
+
+# Window compositor
+exec_always picom -f
