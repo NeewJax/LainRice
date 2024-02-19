@@ -59,7 +59,7 @@ separator=true
 # The type defaults to "mem" if the instance is not specified.
 [memory]
 command=$SCRIPT_DIR/memory/memory
-label=mem: 
+label=mem:
 separator=true
 interval=30
 color=#cb6f86
@@ -112,7 +112,7 @@ CRIT_TX=51200
 # see the script for details.
 [cpu_usage]
 command=$SCRIPT_DIR/cpu_usage/cpu_usage
-label=cpu: 
+label=cpu:
 interval=10
 min_width=CPU 100.00%
 separator=true
@@ -190,5 +190,3 @@ color=#cb6f86
 #markup=pango
 #interval=once
 #signal=11
-
-
