@@ -1,0 +1,8 @@
+configuration {
+    include: "~/.config/rofi/squared-material-red.rasi";
+    font: "Hack Nerd Font Mono 12";
+    show-icons: true;
+    sidebar-mode: true;
+    hide-scrollbar: true;
+}
+@theme "~/.local/share/rofi/themes/squared-material-red.rasi"
